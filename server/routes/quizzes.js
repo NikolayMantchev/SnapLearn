@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { authenticate } from '../middleware/auth.js';
+import { checkUsageLimit } from '../middleware/usageLimit.js';
 import Upload from '../models/Upload.js';
 import Quiz from '../models/Quiz.js';
 import Question from '../models/Question.js';
@@ -9,7 +10,7 @@ import { generate } from '../services/quizGenerator.js';
 
 const router = Router();
 
-router.post('/generate', authenticate, async (req, res, next) => {
+router.post('/generate', authenticate, checkUsageLimit, async (req, res, next) => {
   try {
     const { uploadId, uploadIds, numQuestions, difficulty, types } = req.body;
 
@@ -177,6 +178,23 @@ router.post('/:id/submit', authenticate, async (req, res, next) => {
       correctAnswers: correctCount,
       results: detailedResults,
     });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.delete('/:id', authenticate, async (req, res, next) => {
+  try {
+    const quiz = await Quiz.findOne({ _id: req.params.id, user_id: req.user.id });
+    if (!quiz) return res.status(404).json({ error: 'Quiz nicht gefunden' });
+
+    const questionIds = (await Question.find({ quiz_id: quiz._id }).select('_id')).map(q => q._id);
+    await ReviewItem.deleteMany({ user_id: req.user.id, question_id: { $in: questionIds } });
+    await Question.deleteMany({ quiz_id: quiz._id });
+    await QuizAttempt.deleteMany({ quiz_id: quiz._id });
+    await Quiz.deleteOne({ _id: quiz._id });
+
+    res.json({ success: true });
   } catch (err) {
     next(err);
   }

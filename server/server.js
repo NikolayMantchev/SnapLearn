@@ -18,6 +18,7 @@ import uploadRoutes from './routes/uploads.js';
 import quizRoutes from './routes/quizzes.js';
 import reviewRoutes from './routes/reviews.js';
 import statsRoutes from './routes/stats.js';
+import subscriptionRoutes from './routes/subscription.js';
 
 // Connect to MongoDB
 await connectDB();
@@ -53,6 +54,7 @@ app.use('/api/uploads', uploadRoutes);
 app.use('/api/quizzes', quizRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/stats', statsRoutes);
+app.use('/api/subscription', subscriptionRoutes);
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

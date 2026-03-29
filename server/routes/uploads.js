@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { authenticate } from '../middleware/auth.js';
+import { checkUsageLimit } from '../middleware/usageLimit.js';
 import upload from '../middleware/upload.js';
 import Upload from '../models/Upload.js';
 import Quiz from '../models/Quiz.js';
@@ -12,7 +13,7 @@ import { extractTextFromImage } from '../services/claudeService.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const router = Router();
 
-router.post('/', authenticate, upload.single('image'), async (req, res, next) => {
+router.post('/', authenticate, checkUsageLimit, upload.single('image'), async (req, res, next) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'Kein Bild hochgeladen' });
