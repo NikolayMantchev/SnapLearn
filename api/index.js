@@ -10,6 +10,7 @@ import uploadRoutes from '../server/routes/uploads.js';
 import quizRoutes from '../server/routes/quizzes.js';
 import reviewRoutes from '../server/routes/reviews.js';
 import statsRoutes from '../server/routes/stats.js';
+import subscriptionRoutes from '../server/routes/subscription.js';
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use('/api/uploads', uploadRoutes);
 app.use('/api/quizzes', quizRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/stats', statsRoutes);
+app.use('/api/subscription', subscriptionRoutes);
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
