@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – SnapLearn</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --hint: #9b9b9b;
+      --accent: #0a2540;
+      --accent-light: #1a3f6f;
+      --blue: #185FA5;
+      --blue-light: #E6F1FB;
+      --blue-text: #0C447C;
+      --orange: #993C1D;
+      --orange-light: #FAECE7;
+      --green: #3B6D11;
+      --green-light: #EAF3DE;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--accent);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 13px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 99px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .badge-dark {
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .badge-coppa {
+      background: var(--orange-light);
+      color: var(--orange);
+    }
+
+    .badge-dsgvo {
+      background: var(--blue-light);
+      color: var(--blue-text);
+    }
+
+    .badge-child {
+      background: var(--green-light);
+      color: var(--green);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: var(--bg);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .card-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 4px 0 4px 18px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--hint);
+    }
+
+    .card ul li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      background: var(--bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--orange);
+    }
+
+    .highlight-box {
+      background: var(--orange-light);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin: 10px 0;
+      font-size: 13px;
+      color: var(--orange);
+      font-weight: 500;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 8px;
+    }
+
+    .contact-row span {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-row small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--hint);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .lang-btn {
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    [data-lang="en"] {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .card {
+        padding: 1.1rem 1.1rem;
+      }
+
+      .card-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
+      <button class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-icon">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67V11c0 3.88-2.61 7.5-6 8.78C8.61 18.5 6 14.88 6 11V7.67L12 5z" />
+        </svg>
+      </div>
+      <h1 data-lang="de">Datenschutzerklärung</h1>
+      <h1 data-lang="en" style="display:none">Privacy Policy</h1>
+      <p>SnapLearn: Photo-to-Quiz by AI</p>
+      <div class="hero-meta">
+        <span class="badge badge-dark">Stand: 1. April 2026</span>
+        <span class="badge badge-coppa">COPPA</span>
+        <span class="badge badge-dsgvo">DSGVO / GDPR</span>
+        <span class="badge badge-child">Alle Altersgruppen</span>
+      </div>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">1</span> <span data-lang="de">Verantwortlicher</span><span
+            data-lang="en">Controller</span></div>
+        <div class="card-badges"><span class="badge badge-dsgvo">DSGVO</span></div>
+      </div>
+      <p data-lang="de">Snaplearn<br>Frankfurt am Main, Deutschland</p>
+      <p data-lang="en">
+        <!DOCTYPE html>
+        <html lang="de">
+
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Datenschutzerklärung – SnapLearn</title>
+          <style>
+            *,
+            *::before,
+            *::after {
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+            }
+
+            :root {
+              --bg: #f7f6f2;
+              --surface: #ffffff;
+              --border: rgba(0, 0, 0, 0.08);
+              --text: #1a1a1a;
+              --muted: #6b6b6b;
+              --hint: #9b9b9b;
+              --accent: #0a2540;
+              --accent-light: #1a3f6f;
+              --blue: #185FA5;
+              --blue-light: #E6F1FB;
+              --blue-text: #0C447C;
+              --orange: #993C1D;
+              --orange-light: #FAECE7;
+              --green: #3B6D11;
+              --green-light: #EAF3DE;
+            }
+
+            body {
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+              background: var(--bg);
+              color: var(--text);
+              line-height: 1.7;
+              padding: 2rem 1rem 4rem;
+            }
+
+            .wrap {
+              max-width: 760px;
+              margin: 0 auto;
+            }
+
+            .hero {
+              background: var(--accent);
+              border-radius: 16px;
+              padding: 2.5rem 2rem;
+              margin-bottom: 1.5rem;
+            }
+
+            .hero-icon {
+              width: 48px;
+              height: 48px;
+              background: rgba(255, 255, 255, 0.12);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 1rem;
+            }
+
+            .hero-icon svg {
+              width: 24px;
+              height: 24px;
+              fill: #fff;
+            }
+
+            .hero h1 {
+              color: #fff;
+              font-size: 22px;
+              font-weight: 600;
+              letter-spacing: -0.3px;
+              margin-bottom: 4px;
+            }
+
+            .hero p {
+              color: rgba(255, 255, 255, 0.55);
+              font-size: 13px;
+            }
+
+            .hero-meta {
+              display: flex;
+              gap: 8px;
+              margin-top: 16px;
+              flex-wrap: wrap;
+            }
+
+            .badge {
+              display: inline-flex;
+              align-items: center;
+              gap: 5px;
+              font-size: 11px;
+              font-weight: 600;
+              padding: 4px 10px;
+              border-radius: 99px;
+              letter-spacing: 0.3px;
+              text-transform: uppercase;
+            }
+
+            .badge-dark {
+              background: rgba(255, 255, 255, 0.12);
+              color: rgba(255, 255, 255, 0.7);
+            }
+
+            .badge-coppa {
+              background: var(--orange-light);
+              color: var(--orange);
+            }
+
+            .badge-dsgvo {
+              background: var(--blue-light);
+              color: var(--blue-text);
+            }
+
+            .badge-child {
+              background: var(--green-light);
+              color: var(--green);
+            }
+
+            .card {
+              background: var(--surface);
+              border: 1px solid var(--border);
+              border-radius: 12px;
+              padding: 1.4rem 1.5rem;
+              margin-bottom: 0.75rem;
+            }
+
+            .card-header {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              gap: 12px;
+              margin-bottom: 12px;
+            }
+
+            .card-title {
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text);
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+
+            .card-num {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 22px;
+              height: 22px;
+              background: var(--bg);
+              border-radius: 6px;
+              font-size: 11px;
+              font-weight: 700;
+              color: var(--muted);
+              flex-shrink: 0;
+            }
+
+            .card-badges {
+              display: flex;
+              gap: 6px;
+              flex-wrap: wrap;
+              flex-shrink: 0;
+            }
+
+            .card p {
+              font-size: 14px;
+              color: var(--muted);
+              line-height: 1.7;
+              margin-bottom: 8px;
+            }
+
+            .card p:last-child {
+              margin-bottom: 0;
+            }
+
+            .card ul {
+              list-style: none;
+              padding: 0;
+            }
+
+            .card ul li {
+              font-size: 14px;
+              color: var(--muted);
+              line-height: 1.7;
+              padding: 4px 0 4px 18px;
+              position: relative;
+            }
+
+            .card ul li::before {
+              content: '–';
+              position: absolute;
+              left: 0;
+              color: var(--hint);
+            }
+
+            .card ul li strong {
+              color: var(--text);
+              font-weight: 600;
+            }
+
+            a {
+              color: var(--blue);
+              text-decoration: none;
+            }
+
+            a:hover {
+              text-decoration: underline;
+            }
+
+            code {
+              font-family: 'SF Mono', 'Fira Code', monospace;
+              font-size: 12px;
+              background: var(--bg);
+              padding: 2px 6px;
+              border-radius: 4px;
+              color: var(--orange);
+            }
+
+            .highlight-box {
+              background: var(--orange-light);
+              border-left: 3px solid var(--orange);
+              border-radius: 0 8px 8px 0;
+              padding: 10px 14px;
+              margin: 10px 0;
+              font-size: 13px;
+              color: var(--orange);
+              font-weight: 500;
+            }
+
+            .contact-row {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              background: var(--bg);
+              border-radius: 8px;
+              padding: 10px 14px;
+              margin-top: 8px;
+            }
+
+            .contact-row span {
+              font-size: 14px;
+              color: var(--text);
+              font-weight: 500;
+            }
+
+            .contact-row small {
+              font-size: 12px;
+              color: var(--muted);
+            }
+
+            .footer {
+              text-align: center;
+              font-size: 12px;
+              color: var(--hint);
+              margin-top: 2rem;
+              padding-top: 1.5rem;
+              border-top: 1px solid var(--border);
+            }
+
+            .lang-switch {
+              display: flex;
+              justify-content: flex-end;
+              gap: 8px;
+              margin-bottom: 1rem;
+            }
+
+            .lang-btn {
+              font-size: 12px;
+              padding: 5px 14px;
+              border-radius: 99px;
+              border: 1px solid var(--border);
+              background: var(--surface);
+              color: var(--muted);
+              cursor: pointer;
+              transition: all 0.15s;
+            }
+
+            .lang-btn.active {
+              background: var(--accent);
+              color: #fff;
+              border-color: var(--accent);
+            }
+
+            [data-lang="en"] {
+              display: none;
+            }
+
+            @media (max-width: 600px) {
+              .hero {
+                padding: 1.75rem 1.25rem;
+              }
+
+              .card {
+                padding: 1.1rem 1.1rem;
+              }
+
+              .card-header {
+                flex-direction: column;
+                gap: 8px;
+              }
+            }
+          </style>
+        </head>
+
+        <body>
+          <div class="wrap">
+
+            <div class="lang-switch">
+              <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
+              <button class="lang-btn" onclick="setLang('en')">English</button>
+            </div>
+
+            <!-- HERO -->
+            <div class="hero">
+              <div class="hero-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67V11c0 3.88-2.61 7.5-6 8.78C8.61 18.5 6 14.88 6 11V7.67L12 5z" />
+                </svg>
+              </div>
+              <h1 data-lang="de">Datenschutzerklärung</h1>
+              <h1 data-lang="en" style="display:none">Privacy Policy</h1>
+              <p>SnapLearn: Photo-to-Quiz by AI &nbsp;·&nbsp; com.mana_mana.snaplearnmobile</p>
+              <div class="hero-meta">
+                <span class="badge badge-dark">Stand: 1. April 2026</span>
+                <span class="badge badge-coppa">COPPA</span>
+                <span class="badge badge-dsgvo">DSGVO / GDPR</span>
+                <span class="badge badge-child">Alle Altersgruppen</span>
+              </div>
+            </div>
+
+            <!-- SECTION 1 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">1</span> <span
+                    data-lang="de">Verantwortlicher</span><span data-lang="en">Controller</span></div>
+                <div class="card-badges"><span class="badge badge-dsgvo">DSGVO</span></div>
+              </div>
+              <p data-lang="de">Nikolay Mantchev (Mana)<br>Frankfurt am Main, Deutschland</p>
+              <p data-lang="en">Nikolay Mantchev (Mana)<br>Frankfurt am Main, Germany</p>
+              <div class="contact-row">
+                <div>
+                  <span>privacy@snaplearn-two.vercel.app</span><br>
+                  <small data-lang="de">Datenschutzanfragen bitte per E-Mail</small>
+                  <small data-lang="en">For privacy requests, please email us</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">2</span> <span data-lang="de">Kinderschutz</span><span
+                    data-lang="en">Children's Privacy</span></div>
+                <div class="card-badges"><span class="badge badge-coppa">COPPA</span><span
+                    class="badge badge-child">Alle Altersgruppen</span></div>
+              </div>
+              <div class="highlight-box" data-lang="de">SnapLearn richtet sich an alle Altersgruppen, einschließlich
+                Kinder unter 13 Jahren.</div>
+              <div class="highlight-box" data-lang="en">SnapLearn is designed for all age groups, including children
+                under 13 years of age.</div>
+              <ul>
+                <li data-lang="de">Wir erheben <strong>keine personenbezogenen Daten</strong> von Kindern unter 13
+                  Jahren ohne nachweisliche elterliche Zustimmung.</li>
+                <li data-lang="en">We do <strong>not collect personal data</strong> from children under 13 without
+                  verifiable parental consent.</li>
+                <li data-lang="de">Eltern können jederzeit Auskunft oder Löschung der Daten ihres Kindes verlangen:
+                  <strong>privacy@snaplearn-two.vercel.app</strong>
+                </li>
+                <li data-lang="en">Parents may request access to or deletion of their child's data at any time:
+                  <strong>privacy@snaplearn-two.vercel.app</strong>
+                </li>
+                <li data-lang="de">Werbung wird ausschließlich als <strong>nicht-personalisierte Werbung</strong>
+                  geschaltet (<code>tagForChildDirectedTreatment = true</code>).</li>
+                <li data-lang="en">Ads are served exclusively as <strong>non-personalized ads</strong>
+                  (<code>tagForChildDirectedTreatment = true</code>).</li>
+                <li data-lang="de">Wir verkaufen keine Kinderdaten an Dritte.</li>
+                <li data-lang="en">We do not sell children's data to third parties.</li>
+              </ul>
+            </div>
+
+            <!-- SECTION 3 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">3</span> <span data-lang="de">Erhobene Daten</span><span
+                    data-lang="en">Data We Collect</span></div>
+              </div>
+              <ul>
+                <li data-lang="de"><strong>Fotos / Bilder:</strong> Werden zur KI-Analyse an die Anthropic Claude API
+                  übermittelt. Es findet keine dauerhafte Speicherung bei Anthropic statt.</li>
+                <li data-lang="en"><strong>Photos / Images:</strong> Sent to the Anthropic Claude API for AI analysis.
+                  Anthropic does not permanently store these images.</li>
+                <li data-lang="de"><strong>Gerätedaten:</strong> Anonyme Kennungen für Absturz-Berichte (Firebase
+                  Crashlytics).</li>
+                <li data-lang="en"><strong>Device data:</strong> Anonymous identifiers for crash reporting (Firebase
+                  Crashlytics).</li>
+                <li data-lang="de"><strong>Kaufhistorie:</strong> In-App-Käufe werden über RevenueCat und Google Play
+                  Billing verarbeitet.</li>
+                <li data-lang="en"><strong>Purchase history:</strong> In-app purchases are processed via RevenueCat and
+                  Google Play Billing.</li>
+                <li data-lang="de"><strong>Nutzungsstatistiken:</strong> Anonymisierte App-Nutzungsdaten über Google
+                  Analytics for Firebase.</li>
+                <li data-lang="en"><strong>Usage statistics:</strong> Anonymized app usage data via Google Analytics for
+                  Firebase.</li>
+              </ul>
+            </div>
+
+            <!-- SECTION 4 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">4</span> <span data-lang="de">KI-Verarbeitung (Anthropic
+                    Claude)</span><span data-lang="en">AI Processing (Anthropic Claude)</span></div>
+              </div>
+              <p data-lang="de">Fotos, die du in der App aufnimmst, werden zur Textextraktion und Quiz-Generierung an
+                die Anthropic Claude Vision API übermittelt.</p>
+              <p data-lang="en">Photos you take in the app are sent to the Anthropic Claude Vision API for text
+                extraction and quiz generation.</p>
+              <ul>
+                <li data-lang="de">Anthropic verarbeitet Daten gemäß ihrer <a href="https://www.anthropic.com/privacy"
+                    target="_blank">Datenschutzrichtlinie</a>.</li>
+                <li data-lang="en">Anthropic processes data according to their <a
+                    href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy</a>.</li>
+                <li data-lang="de">Bilder werden nach der Verarbeitung nicht dauerhaft bei Anthropic gespeichert.</li>
+                <li data-lang="en">Images are not permanently stored by Anthropic after processing.</li>
+                <li data-lang="de">Lade keine Bilder mit sensiblen persönlichen Informationen hoch.</li>
+                <li data-lang="en">Do not upload images containing sensitive personal information.</li>
+              </ul>
+            </div>
+
+            <!-- SECTION 5 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">5</span> <span data-lang="de">Werbung (Google
+                    AdMob)</span><span data-lang="en">Advertising (Google AdMob)</span></div>
+                <div class="card-badges"><span class="badge badge-coppa">COPPA</span></div>
+              </div>
+              <ul>
+                <li data-lang="de">Free-Nutzer sehen Werbung über Google AdMob.</li>
+                <li data-lang="en">Free users see ads via Google AdMob.</li>
+                <li data-lang="de">Werbung wird ausschließlich <strong>nicht-personalisiert</strong> ausgeliefert – kein
+                  Behavioral Targeting, kein Remarketing bei Kindern.</li>
+                <li data-lang="en">Ads are served exclusively as <strong>non-personalized</strong> – no behavioral
+                  targeting, no remarketing to children.</li>
+                <li data-lang="de">Basic- und Pro-Nutzer sehen keine Werbung.</li>
+                <li data-lang="en">Basic and Pro subscribers see no ads.</li>
+                <li data-lang="de">Google AdMob Datenschutz: <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a></li>
+                <li data-lang="en">Google AdMob Privacy Policy: <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a></li>
+              </ul>
+            </div>
+
+            <!-- SECTION 6 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">6</span> <span data-lang="de">In-App-Käufe
+                    (RevenueCat)</span><span data-lang="en">In-App Purchases (RevenueCat)</span></div>
+              </div>
+              <p data-lang="de">Abonnements (Basic €2,99/Monat, Pro €12,99/Monat) werden über Google Play Billing und
+                RevenueCat verarbeitet. Wir speichern keine Zahlungsdaten direkt.</p>
+              <p data-lang="en">Subscriptions (Basic €2.99/month, Pro €12.99/month) are processed via Google Play
+                Billing and RevenueCat. We do not directly store payment data.</p>
+              <ul>
+                <li data-lang="de">RevenueCat Datenschutz: <a href="https://www.revenuecat.com/privacy"
+                    target="_blank">revenuecat.com/privacy</a></li>
+                <li data-lang="en">RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy"
+                    target="_blank">revenuecat.com/privacy</a></li>
+                <li data-lang="de">Google Play Billing: <a href="https://play.google.com/about/play-terms/index.html"
+                    target="_blank">play.google.com</a></li>
+                <li data-lang="en">Google Play Billing: <a href="https://play.google.com/about/play-terms/index.html"
+                    target="_blank">play.google.com</a></li>
+              </ul>
+            </div>
+
+            <!-- SECTION 7 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">7</span> <span data-lang="de">Deine Rechte</span><span
+                    data-lang="en">Your Rights</span></div>
+                <div class="card-badges"><span class="badge badge-dsgvo">DSGVO</span></div>
+              </div>
+              <ul>
+                <li data-lang="de"><strong>Auskunft:</strong> Du kannst jederzeit Auskunft über deine gespeicherten
+                  Daten verlangen.</li>
+                <li data-lang="en"><strong>Access:</strong> You may request information about your stored data at any
+                  time.</li>
+                <li data-lang="de"><strong>Berichtigung & Löschung:</strong> Unrichtige oder nicht mehr benötigte Daten
+                  werden auf Anfrage korrigiert oder gelöscht.</li>
+                <li data-lang="en"><strong>Correction & Deletion:</strong> Incorrect or no longer needed data will be
+                  corrected or deleted upon request.</li>
+                <li data-lang="de"><strong>Widerspruch:</strong> Du kannst der Verarbeitung deiner Daten jederzeit
+                  widersprechen.</li>
+                <li data-lang="en"><strong>Objection:</strong> You may object to the processing of your data at any
+                  time.</li>
+                <li data-lang="de"><strong>Beschwerderecht:</strong> Du kannst dich beim Hessischen Beauftragten für
+                  Datenschutz und Informationsfreiheit beschweren.</li>
+                <li data-lang="en"><strong>Right to complain:</strong> You may lodge a complaint with the Hessian
+                  Commissioner for Data Protection and Freedom of Information.</li>
+              </ul>
+              <div class="contact-row" style="margin-top:10px">
+                <div>
+                  <span>privacy@snaplearn-two.vercel.app</span><br>
+                  <small data-lang="de">Alle Datenschutzanfragen</small>
+                  <small data-lang="en">All privacy requests</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 8 -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title"><span class="card-num">8</span> <span data-lang="de">Änderungen dieser
+                    Richtlinie</span><span data-lang="en">Changes to this Policy</span></div>
+              </div>
+              <p data-lang="de">Wir behalten uns vor, diese Datenschutzerklärung bei wesentlichen Änderungen zu
+                aktualisieren. Das Datum der letzten Änderung ist oben angegeben. Wir empfehlen, diese Seite regelmäßig
+                zu prüfen.</p>
+              <p data-lang="en">We reserve the right to update this privacy policy when significant changes occur. The
+                date of the last change is shown above. We recommend checking this page regularly.</p>
+            </div>
+
+            <div class="footer">
+              <p data-lang="de">SnapLearn: Photo-to-Quiz by AI &nbsp;·&nbsp; Frankfurt am Main, Deutschland
+                &nbsp;·&nbsp; Stand: 1. April 2026</p>
+              <p data-lang="en">SnapLearn: Photo-to-Quiz by AI &nbsp;·&nbsp; Frankfurt am Main, Germany &nbsp;·&nbsp;
+                Last updated: April 1, 2026</p>
+              <p style="margin-top:6px">snaplearn-two.vercel.app/privacy</p>
+            </div>
+
+          </div>
+
+          <script>
+            function setLang(lang) {
+              const other = lang === 'de' ? 'en' : 'de';
+              document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.style.display = '');
+              document.querySelectorAll('[data-lang="' + other + '"]').forEach(el => el.style.display = 'none');
+              document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+              event.target.classList.add('active');
+            }
+          </script>
+        </body>
+
+        </html><br>Frankfurt am Main, Germany
+      </p>
+      <div class="contact-row">
+        <div>
+          <span>04vision04@gmail.com</span><br>
+          <small data-lang="de">Datenschutzanfragen bitte per E-Mail</small>
+          <small data-lang="en">For privacy requests, please email us</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">2</span> <span data-lang="de">Kinderschutz</span><span
+            data-lang="en">Children's Privacy</span></div>
+        <div class="card-badges"><span class="badge badge-coppa">COPPA</span><span class="badge badge-child">Alle
+            Altersgruppen</span></div>
+      </div>
+      <div class="highlight-box" data-lang="de">SnapLearn richtet sich an alle Altersgruppen, einschließlich Kinder
+        unter 13 Jahren.</div>
+      <div class="highlight-box" data-lang="en">SnapLearn is designed for all age groups, including children under 13
+        years of age.</div>
+      <ul>
+        <li data-lang="de">Wir erheben <strong>keine personenbezogenen Daten</strong> von Kindern unter 13 Jahren ohne
+          nachweisliche elterliche Zustimmung.</li>
+        <li data-lang="en">We do <strong>not collect personal data</strong> from children under 13 without verifiable
+          parental consent.</li>
+        <li data-lang="de">Eltern können jederzeit Auskunft oder Löschung der Daten ihres Kindes verlangen:
+          <strong>privacy@snaplearn-two.vercel.app</strong>
+        </li>
+        <li data-lang="en">Parents may request access to or deletion of their child's data at any time:
+          <strong>privacy@snaplearn-two.vercel.app</strong>
+        </li>
+        <li data-lang="de">Werbung wird ausschließlich als <strong>nicht-personalisierte Werbung</strong> geschaltet
+          (<code>tagForChildDirectedTreatment = true</code>).</li>
+        <li data-lang="en">Ads are served exclusively as <strong>non-personalized ads</strong>
+          (<code>tagForChildDirectedTreatment = true</code>).</li>
+        <li data-lang="de">Wir verkaufen keine Kinderdaten an Dritte.</li>
+        <li data-lang="en">We do not sell children's data to third parties.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">3</span> <span data-lang="de">Erhobene Daten</span><span
+            data-lang="en">Data We Collect</span></div>
+      </div>
+      <ul>
+        <li data-lang="de"><strong>Fotos / Bilder:</strong> Werden zur KI-Analyse an die Anthropic Claude API
+          übermittelt. Es findet keine dauerhafte Speicherung bei Anthropic statt.</li>
+        <li data-lang="en"><strong>Photos / Images:</strong> Sent to the Anthropic Claude API for AI analysis. Anthropic
+          does not permanently store these images.</li>
+        <li data-lang="de"><strong>Gerätedaten:</strong> Anonyme Kennungen für Absturz-Berichte (Firebase Crashlytics).
+        </li>
+        <li data-lang="en"><strong>Device data:</strong> Anonymous identifiers for crash reporting (Firebase
+          Crashlytics).</li>
+        <li data-lang="de"><strong>Kaufhistorie:</strong> In-App-Käufe werden über RevenueCat und Google Play Billing
+          verarbeitet.</li>
+        <li data-lang="en"><strong>Purchase history:</strong> In-app purchases are processed via RevenueCat and Google
+          Play Billing.</li>
+        <li data-lang="de"><strong>Nutzungsstatistiken:</strong> Anonymisierte App-Nutzungsdaten über Google Analytics
+          for Firebase.</li>
+        <li data-lang="en"><strong>Usage statistics:</strong> Anonymized app usage data via Google Analytics for
+          Firebase.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">4</span> <span data-lang="de">KI-Verarbeitung (Anthropic
+            Claude)</span><span data-lang="en">AI Processing (Anthropic Claude)</span></div>
+      </div>
+      <p data-lang="de">Fotos, die du in der App aufnimmst, werden zur Textextraktion und Quiz-Generierung an die
+        Anthropic Claude Vision API übermittelt.</p>
+      <p data-lang="en">Photos you take in the app are sent to the Anthropic Claude Vision API for text extraction and
+        quiz generation.</p>
+      <ul>
+        <li data-lang="de">Anthropic verarbeitet Daten gemäß ihrer <a href="https://www.anthropic.com/privacy"
+            target="_blank">Datenschutzrichtlinie</a>.</li>
+        <li data-lang="en">Anthropic processes data according to their <a href="https://www.anthropic.com/privacy"
+            target="_blank">Privacy Policy</a>.</li>
+        <li data-lang="de">Bilder werden nach der Verarbeitung nicht dauerhaft bei Anthropic gespeichert.</li>
+        <li data-lang="en">Images are not permanently stored by Anthropic after processing.</li>
+        <li data-lang="de">Lade keine Bilder mit sensiblen persönlichen Informationen hoch.</li>
+        <li data-lang="en">Do not upload images containing sensitive personal information.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">5</span> <span data-lang="de">Werbung (Google AdMob)</span><span
+            data-lang="en">Advertising (Google AdMob)</span></div>
+        <div class="card-badges"><span class="badge badge-coppa">COPPA</span></div>
+      </div>
+      <ul>
+        <li data-lang="de">Free-Nutzer sehen Werbung über Google AdMob.</li>
+        <li data-lang="en">Free users see ads via Google AdMob.</li>
+        <li data-lang="de">Werbung wird ausschließlich <strong>nicht-personalisiert</strong> ausgeliefert – kein
+          Behavioral Targeting, kein Remarketing bei Kindern.</li>
+        <li data-lang="en">Ads are served exclusively as <strong>non-personalized</strong> – no behavioral targeting, no
+          remarketing to children.</li>
+        <li data-lang="de">Basic- und Pro-Nutzer sehen keine Werbung.</li>
+        <li data-lang="en">Basic and Pro subscribers see no ads.</li>
+        <li data-lang="de">Google AdMob Datenschutz: <a href="https://policies.google.com/privacy"
+            target="_blank">policies.google.com/privacy</a></li>
+        <li data-lang="en">Google AdMob Privacy Policy: <a href="https://policies.google.com/privacy"
+            target="_blank">policies.google.com/privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">6</span> <span data-lang="de">In-App-Käufe
+            (RevenueCat)</span><span data-lang="en">In-App Purchases (RevenueCat)</span></div>
+      </div>
+      <p data-lang="de">Abonnements (Basic €2,99/80 photos oder Qwizgenerierungen, Pro €12,99/80 photos oder
+        generierungen) werden über Google Play Billing und RevenueCat verarbeitet. Wir speichern keine Zahlungsdaten
+        direkt.</p>
+      <p data-lang="en">Subscriptions (Basic €2.99/photos or Quiz generation, Pro €12.99/month) are processed via Google
+        Play Billing and RevenueCat. We do not directly store payment data.</p>
+      <ul>
+        <li data-lang="de">RevenueCat Datenschutz: <a href="https://www.revenuecat.com/privacy"
+            target="_blank">revenuecat.com/privacy</a></li>
+        <li data-lang="en">RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy"
+            target="_blank">revenuecat.com/privacy</a></li>
+        <li data-lang="de">Google Play Billing: <a href="https://play.google.com/about/play-terms/index.html"
+            target="_blank">play.google.com</a></li>
+        <li data-lang="en">Google Play Billing: <a href="https://play.google.com/about/play-terms/index.html"
+            target="_blank">play.google.com</a></li>
+      </ul>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">7</span> <span data-lang="de">Deine Rechte</span><span
+            data-lang="en">Your Rights</span></div>
+        <div class="card-badges"><span class="badge badge-dsgvo">DSGVO</span></div>
+      </div>
+      <ul>
+        <li data-lang="de"><strong>Auskunft:</strong> Du kannst jederzeit Auskunft über deine gespeicherten Daten
+          verlangen.</li>
+        <li data-lang="en"><strong>Access:</strong> You may request information about your stored data at any time.</li>
+        <li data-lang="de"><strong>Berichtigung & Löschung:</strong> Unrichtige oder nicht mehr benötigte Daten werden
+          auf Anfrage korrigiert oder gelöscht.</li>
+        <li data-lang="en"><strong>Correction & Deletion:</strong> Incorrect or no longer needed data will be corrected
+          or deleted upon request.</li>
+        <li data-lang="de"><strong>Widerspruch:</strong> Du kannst der Verarbeitung deiner Daten jederzeit
+          widersprechen.</li>
+        <li data-lang="en"><strong>Objection:</strong> You may object to the processing of your data at any time.</li>
+        <li data-lang="de"><strong>Beschwerderecht:</strong> Du kannst dich beim Hessischen Beauftragten für Datenschutz
+          und Informationsfreiheit beschweren.</li>
+        <li data-lang="en"><strong>Right to complain:</strong> You may lodge a complaint with the Hessian Commissioner
+          for Data Protection and Freedom of Information.</li>
+      </ul>
+      <div class="contact-row" style="margin-top:10px">
+        <div>
+          <span>privacy@snaplearn-two.vercel.app</span><br>
+          <small data-lang="de">Alle Datenschutzanfragen</small>
+          <small data-lang="en">All privacy requests</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-num">8</span> <span data-lang="de">Änderungen dieser
+            Richtlinie</span><span data-lang="en">Changes to this Policy</span></div>
+      </div>
+      <p data-lang="de">Wir behalten uns vor, diese Datenschutzerklärung bei wesentlichen Änderungen zu aktualisieren.
+        Das Datum der letzten Änderung ist oben angegeben. Wir empfehlen, diese Seite regelmäßig zu prüfen.</p>
+      <p data-lang="en">We reserve the right to update this privacy policy when significant changes occur. The date of
+        the last change is shown above. We recommend checking this page regularly.</p>
+    </div>
+
+    <div class="footer">
+      <p data-lang="de">SnapLearn: Photo-to-Quiz by AI &nbsp;·&nbsp; Frankfurt am Main, Deutschland &nbsp;·&nbsp; Stand:
+        1. April 2026</p>
+      <p data-lang="en">SnapLearn: Photo-to-Quiz by AI &nbsp;·&nbsp; Frankfurt am Main, Germany &nbsp;·&nbsp; Last
+        updated: April 1, 2026</p>
+      <p style="margin-top:6px">snaplearn-two.vercel.app/privacy</p>
+    </div>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const other = lang === 'de' ? 'en' : 'de';
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.style.display = '');
+      document.querySelectorAll('[data-lang="' + other + '"]').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
