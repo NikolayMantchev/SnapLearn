@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/common/Navbar';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import Login from './pages/Login';
@@ -11,6 +12,7 @@ import QuizList from './pages/QuizList';
 import QuizPlay from './pages/QuizPlay';
 import Review from './pages/Review';
 import Stats from './pages/Stats';
+import Settings from './pages/Settings';
 import * as reviewService from './services/reviewService';
 
 function AppLayout() {
@@ -35,7 +37,7 @@ function AppLayout() {
   }, [user]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0f0f1a]">
       {user && <Navbar reviewDueCount={reviewDueCount} />}
       <main className={user ? 'mx-auto max-w-7xl px-4 py-6' : ''}>
         <Routes>
@@ -89,6 +91,14 @@ function AppLayout() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Settings />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
     </div>
@@ -97,8 +107,10 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AppLayout />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <AppLayout />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

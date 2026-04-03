@@ -6,6 +6,10 @@
     <title>SnapLearn</title>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem('app_theme') === 'dark')
+        document.documentElement.classList.add('dark');
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
